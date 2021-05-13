@@ -6,15 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles.css" />
-   
-    
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div class='container'>
-      <img id="weather_icon" src="#">
-      <p><span id="temp"></span><span id="temp_unit"></span></p>
+    <div id="search">
+      <input id="search_box" type="text" placeholder="City Name" /><button
+        type="search"
+        onclick="getData()"
+      >
+        Search
+      </button>
     </div>
-    
+    <div class="container">
+      <p><span id="city_name"></span></p>
+
+      <p id="temperature">
+        <span id="temp_value"></span><span id="temp_unit">&#176;F</span
+        ><img id="weather_icon" src="#" />
+      </p>
+    </div>
+
     <script src="config.js"></script>
     <script src="script.js"></script>
   </body>
