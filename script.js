@@ -7,10 +7,18 @@ let search = document.getElementById("search_box");
 
 const getData = async (location) => {
   location = getSearch();
-  const response = await fetch(
-    `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${API_KEY}`,
-    { mode: "cors" }
-  );
+  let response = "";
+  if (location != "") {
+    response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=imperial&appid=${API_KEY}`,
+      { mode: "cors" }
+    );
+  } else {
+    response = await fetch(
+      `https://api.openweathermap.org/data/2.5/weather?q=denver&units=imperial&appid=${API_KEY}`,
+      { mode: "cors" }
+    );
+  }
 
   const weatherData = await response.json();
   return [
