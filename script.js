@@ -1,4 +1,4 @@
-let API_KEY = config.API_KEY;
+let API_KEY = "486e8c3b4e813c181427099fa7b4b3de";
 let weatherIcon = document.getElementById("weather_icon");
 let temperature = document.getElementById("temp_value");
 let tempUnit = document.getElementById("temp_unit");
